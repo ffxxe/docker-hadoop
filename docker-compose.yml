@@ -1,0 +1,26 @@
+#docker-compose up -d
+
+version: "3"
+
+services:
+  headnode:
+    image: ffxxe/hadoop-headnode:hadoop3.1.2
+    container_name: headnode
+    ports:
+      - 9870:9870/tcp
+      - 8088:8088/tcp
+    networks:
+      - net-hadoop
+
+  worker:
+    image: ffxxe/hadoop-worker:hadoop3.1.2
+    container_name: worker
+    depends_on:
+      - headnode
+    networks:
+      - net-hadoop
+
+networks:
+  net-hadoop:
+    external:
+      name: net-hadoop
