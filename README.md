@@ -1,6 +1,7 @@
 # docker-hadoop
 
 **Install docker**
+
 sudo yum install docker
 
 **Enable service**
