@@ -1,4 +1,4 @@
-# docker-hadoop
+# Containers
 
 **Install docker**
 
@@ -19,3 +19,13 @@ sudo docker run -p 8088:8088 -p 9870:9870 -d --name headnode --network=net-hadoo
 **Run worker**
 
 sudo docker run -d --name worker --network=net-hadoop ffxxe/hadoop-worker:hadoop3.1.2
+
+# Docker-compose
+
+**Install docker-compose**
+
+sudo yum install docker-compose-1.18.0-4.el7.noarch
+
+**Run**
+
+sudo docker-compose up -d
