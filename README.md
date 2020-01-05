@@ -1,4 +1,4 @@
-# Containers
+# Quick start
 
 **Install docker**
 
