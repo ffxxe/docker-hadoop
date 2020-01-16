@@ -25,7 +25,9 @@ sudo docker run -d --name worker --network=net-hadoop ffxxe/hadoop-worker:hadoop
 
 **Install docker-compose**
 ```
-sudo yum install docker-compose-1.18.0-4.el7.noarch
+sudo yum install epel-release
+sudo yum install -y python-pip
+sudo pip install docker-compose
 ```
 **Run**
 ```
